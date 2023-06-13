@@ -9,9 +9,6 @@
 # And if they are not installed, install them
 pckgs <- c("plotly", "tidyverse","htmlwidgets")
 
-if (any(pckgs %notin% rownames(installed.packages())==TRUE)){
-  install.packages(pckgs, repos = c(CRAN = "http://cloud.r-project.org"))}
-  
 sapply(pckgs, FUN = function(x){require(x, character.only = TRUE)})
 
 #### IMPORT DATA ####
